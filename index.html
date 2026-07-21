@@ -147,9 +147,25 @@
   }
   .meta-chip .ico svg{ width:14px; height:14px; color:#04160c; }
 
+  /* ---- Join Virtually ---- */
+  .join{
+    margin-top:80px;
+    width:100%;
+    max-width:600px;
+    position:relative;
+  }
+  .join-card p{
+    position:relative;
+    font-size:15px;
+    color:var(--ink-2);
+    line-height:1.6;
+    max-width:440px;
+    margin:0 auto 26px;
+  }
+
   /* ---- Quiz section: the page's actual job ---- */
   .quiz{
-    margin-top:88px;
+    margin-top:56px;
     width:100%;
     max-width:600px;
     position:relative;
@@ -572,6 +588,19 @@
     </div>
   </div>
 
+  <section class="join" id="join">
+    <div class="quiz-eyebrow">Live Session</div>
+    <div class="quiz-card join-card">
+      <h2>Join Virtually</h2>
+      <p>Can't make it in person? Join the summit live over Zoom using the link below.</p>
+
+      <a class="quiz-btn" id="zoomLink" href="https://us06web.zoom.us/j/82370161159?pwd=ka5JlS4Oosa1C13clngxEp1KmkhNuZ.1" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l5-3v10l-5-3M4 6h9a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/></svg>
+        Join on Zoom
+      </a>
+    </div>
+  </section>
+
   <section class="quiz" id="quiz">
     <div class="quiz-eyebrow">Live Session</div>
     <div class="quiz-card">
@@ -638,18 +667,26 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td class="time">9:30 AM</td><td class="time">9:45 AM</td><td>15 min</td><td class="session">Welcome &amp; Reception</td><td>Md Shahedul Haque</td></tr>
-            <tr><td class="time">9:45 AM</td><td class="time">9:50 AM</td><td>5 min</td><td class="session">Quran Recitation</td><td>Syed Al Mahi</td></tr>
-            <tr><td class="time">9:50 AM</td><td class="time">10:00 AM</td><td>10 min</td><td class="session">Dua</td><td>Ripon Ahmed</td></tr>
-            <tr><td class="time">10:00 AM</td><td class="time">10:15 AM</td><td>15 min</td><td class="session">Vision 2030: Road to 5000; Growing Together</td><td>"Barister Saif Uddin Khaled / Nasser Zaman Chowdhury"</td></tr>
+            <tr><td class="time">9:30 AM</td><td class="time">9:45 AM</td><td>15 Minutes</td><td class="session">Welcome &amp; Reception</td><td>Md Shahedul Haque</td></tr>
+            <tr><td class="time">9:45 AM</td><td class="time">9:50 AM</td><td>05 Minutes</td><td class="session">Quran Recitation</td><td>Syed Al Mahi</td></tr>
+            <tr><td class="time">9:50 AM</td><td class="time">10:00 AM</td><td>10 Minutes</td><td class="session">Dua</td><td>Ripon Ahmed</td></tr>
+            <tr><td class="time">10:00 AM</td><td class="time">10:15 AM</td><td>15 Minutes</td><td class="session">Vision 2030: Road to 5000, Growing Together</td><td>Barister Saif Uddin Khaled</td></tr>
             <tr><td class="time">10:15 AM</td><td class="time">11:40 AM</td><td>1.25 Hrs</td><td class="session">Mind Training</td><td>Coach Kamrul Hasan</td></tr>
-            <tr><td class="time">12:30 PM</td><td class="time">1:30 PM</td><td>60 min</td><td class="session">Lunch Break</td><td>&mdash;</td></tr>
-            <tr><td class="time">1:30 PM</td><td class="time">2:30 PM</td><td>60 min</td><td class="session">Workshop Session</td><td>Coach Kamrul Hasan</td></tr>
-            <tr><td class="time">2:30 PM</td><td class="time">3:30 PM</td><td>60 min</td><td class="session">Breakout Groups</td><td>Facilitators</td></tr>
-            <tr><td class="time">3:30 PM</td><td class="time">3:45 PM</td><td>15 min</td><td class="session">Coffee Break</td><td>&mdash;</td></tr>
-            <tr><td class="time">3:45 PM</td><td class="time">4:45 PM</td><td>60 min</td><td class="session">Fireside Chat</td><td>Coach Kamrul Hasan</td></tr>
-            <tr><td class="time">4:45 PM</td><td class="time">5:15 PM</td><td>30 min</td><td class="session">Quiz &amp; Awards</td><td>Host</td></tr>
-            <tr><td class="time">5:15 PM</td><td class="time">5:30 PM</td><td>15 min</td><td class="session">Closing Remarks</td><td>Host</td></tr>
+            <tr><td class="time">11:40 AM</td><td class="time">11:45 AM</td><td>05 Minutes</td><td class="session">Quiz 1: Mind Training &amp; Prize Giving</td><td>&mdash;</td></tr>
+            <tr><td class="time">11:45 AM</td><td class="time">12:10 PM</td><td>25 Minutes</td><td class="session">Induction Program &amp; Memory Game</td><td>Nasser Zaman Chowdhury</td></tr>
+            <tr><td class="time">12:10 PM</td><td class="time">12:15 PM</td><td>05 Minutes</td><td class="session">Short Break</td><td>&mdash;</td></tr>
+            <tr><td class="time">12:15 PM</td><td class="time">12:20 PM</td><td>05 Minutes</td><td class="session">Instant Performance</td><td>&mdash;</td></tr>
+            <tr><td class="time">12:20 PM</td><td class="time">1:25 PM</td><td>1 hr 10 Minutes</td><td class="session">Team Work</td><td>Coach Kamrul Hasan</td></tr>
+            <tr><td class="time">1:25 PM</td><td class="time">1:30 PM</td><td>05 Minutes</td><td class="session">Quiz 2: Team Work &amp; Prize Giving</td><td>&mdash;</td></tr>
+            <tr><td class="time">1:30 PM</td><td class="time">3:00 PM</td><td>1 hr 30 Minutes</td><td class="session">Lunch &amp; Prayer Break</td><td>&mdash;</td></tr>
+            <tr><td class="time">3:00 PM</td><td class="time">3:15 PM</td><td>15 Minutes</td><td class="session">Instant Performance &amp; Activity</td><td>&mdash;</td></tr>
+            <tr><td class="time">3:15 PM</td><td class="time">4:25 PM</td><td>1 hr 10 Minutes</td><td class="session">Business Growth: Road to 5000</td><td>Coach Kamrul Hasan</td></tr>
+            <tr><td class="time">4:25 PM</td><td class="time">4:30 PM</td><td>05 Minutes</td><td class="session">Quiz 3: Business Growth &amp; Prize Giving</td><td>&mdash;</td></tr>
+            <tr><td class="time">4:30 PM</td><td class="time">4:40 PM</td><td>10 Minutes</td><td class="session">Career Growth: Change the World</td><td>&mdash;</td></tr>
+            <tr><td class="time">4:40 PM</td><td class="time">4:45 PM</td><td>05 Minutes</td><td class="session">Project: Rapid Growth 2026</td><td>Itmam Fazal Chowdhury</td></tr>
+            <tr><td class="time">4:45 PM</td><td class="time">4:50 PM</td><td>05 Minutes</td><td class="session">Next 12 Months</td><td>Md Shahedul Haque Chowdhury</td></tr>
+            <tr><td class="time">4:50 PM</td><td class="time">5:15 PM</td><td>25 Minutes</td><td class="session">Award Giving Ceremony</td><td>Farhat Shafi Chowdhury</td></tr>
+            <tr><td class="time">5:15 PM</td><td class="time">5:25 PM</td><td>10 Minutes</td><td class="session">Raffle Draw &amp; Prize Giving Ceremony</td><td>Farhat Shafi Chowdhury</td></tr>
           </tbody>
         </table>
       </div>
@@ -710,11 +747,15 @@
   </div>
   <div class="credit">
     The Synergy Summit &mdash; 2026 &nbsp;|&nbsp; Organized by <a href="#" onclick="return false;">Talent Synergy</a><br><br>
-    Powered By: World Wide Compliance Team from Talent Synergy
+Powered By: World Wide Compliance Team of Talent Synergy
   </div>
 </footer>
 
 <script>
+  // ---- Update this if the Zoom link changes ----
+  const ZOOM_LINK = "https://us06web.zoom.us/j/82370161159?pwd=ka5JlS4Oosa1C13clngxEp1KmkhNuZ.1";
+  document.getElementById('zoomLink').href = ZOOM_LINK;
+
   // ---- Update these whenever you switch to new Google Forms ----
   const QUIZ_LINK_1 = "https://forms.google.com/";
   const QUIZ_LINK_2 = "https://forms.google.com/";
