@@ -540,11 +540,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td class="time">9:30 AM</td><td class="time">10:00 AM</td><td>30 min</td><td class="session">Registration &amp; Welcome</td><td>Front Desk Team</td></tr>
-            <tr><td class="time">10:00 AM</td><td class="time">10:15 AM</td><td>15 min</td><td class="session">Opening Remarks</td><td>Host</td></tr>
-            <tr><td class="time">10:15 AM</td><td class="time">11:15 AM</td><td>60 min</td><td class="session">Keynote: Road to 5000</td><td>Coach Kamrul Hasan</td></tr>
-            <tr><td class="time">11:15 AM</td><td class="time">11:30 AM</td><td>15 min</td><td class="session">Tea Break</td><td>&mdash;</td></tr>
-            <tr><td class="time">11:30 AM</td><td class="time">12:30 PM</td><td>60 min</td><td class="session">Panel Discussion</td><td>Panel Speakers</td></tr>
+            <tr><td class="time">9:30 AM</td><td class="time">9:45 AM</td><td>15 min</td><td class="session">Welcome &amp; Reception</td><td>Md Shahedul Haque</td></tr>
+            <tr><td class="time">9:45 AM</td><td class="time">9:50 AM</td><td>5 min</td><td class="session">Quran Recitation</td><td>Syed Al Mahi</td></tr>
+            <tr><td class="time">9:50 AM</td><td class="time">10:00 AM</td><td>10 min</td><td class="session">Dua</td><td>Ripon Ahmed</td></tr>
+            <tr><td class="time">10:00 AM</td><td class="time">10:15 AM</td><td>15 min</td><td class="session">Vision 2030: Road to 5000; Growing Together</td><td>"Barister Saif Uddin Khaled / Nasser Zaman Chowdhury"</td></tr>
+            <tr><td class="time">10:15 AM</td><td class="time">11:40 AM</td><td>1.25 Hrs</td><td class="session">Mind Training</td><td>Coach Kamrul Hasan</td></tr>
             <tr><td class="time">12:30 PM</td><td class="time">1:30 PM</td><td>60 min</td><td class="session">Lunch Break</td><td>&mdash;</td></tr>
             <tr><td class="time">1:30 PM</td><td class="time">2:30 PM</td><td>60 min</td><td class="session">Workshop Session</td><td>Coach Kamrul Hasan</td></tr>
             <tr><td class="time">2:30 PM</td><td class="time">3:30 PM</td><td>60 min</td><td class="session">Breakout Groups</td><td>Facilitators</td></tr>
@@ -619,6 +619,28 @@
   // ---- Update the quiz link here whenever you switch to a new Google Form ----
   const QUIZ_LINK = "https://forms.google.com/";
   document.getElementById('quizLink').href = QUIZ_LINK;
+
+  // ---- Toggle the Itinerary tab on/off. Set to true when you're ready to publish it. ----
+  const SHOW_ITINERARY = true;
+
+  if (!SHOW_ITINERARY) {
+    const itineraryBtn = document.getElementById('tab-btn-itinerary');
+    const itineraryPanel = document.getElementById('tab-panel-itinerary');
+    const dosBtn = document.getElementById('tab-btn-dos');
+    const dosPanel = document.getElementById('tab-panel-dos');
+
+    itineraryBtn.style.display = 'none';
+    itineraryPanel.classList.remove('active');
+    itineraryPanel.hidden = true;
+
+    dosBtn.classList.add('active');
+    dosBtn.setAttribute('aria-selected', 'true');
+    dosPanel.classList.add('active');
+    dosPanel.hidden = false;
+
+    // Only one tab left to show, so hide the switcher itself
+    document.querySelector('.tab-nav-wrap').style.display = 'none';
+  }
 
   // ---- Tabs: Itinerary / Do's & Don'ts ----
   const tabs = [
