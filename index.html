@@ -261,6 +261,49 @@
     justify-content:center;
     gap:8px;
   }
+
+  /* ---- Vision Board ---- */
+  .vision{
+    margin-top:56px;
+    width:100%;
+    max-width:600px;
+    position:relative;
+  }
+  .vision-card{
+    position:relative;
+    padding:44px 40px 40px;
+    border-radius:22px;
+    background:linear-gradient(165deg, rgba(51,193,122,0.10), rgba(255,255,255,0.02) 55%);
+    border:1px solid var(--line);
+    box-shadow:0 30px 70px -30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+    overflow:hidden;
+  }
+  .vision-card::before{
+    content:"";
+    position:absolute;
+    top:-40%; left:50%;
+    width:220px; height:220px;
+    transform:translateX(-50%);
+    background:radial-gradient(circle, rgba(126,230,172,0.22), transparent 70%);
+    filter:blur(10px);
+    pointer-events:none;
+  }
+  .vision-card h2{
+    position:relative;
+    font-family:'Sora', sans-serif;
+    font-size:clamp(22px, 3.4vw, 30px);
+    font-weight:700;
+    color:var(--ink-0);
+    margin-bottom:12px;
+  }
+  .vision-card p{
+    position:relative;
+    font-size:15px;
+    color:var(--ink-2);
+    line-height:1.6;
+    max-width:440px;
+    margin:0 auto 30px;
+  }
   .dot{
     width:7px; height:7px;
     border-radius:50%;
@@ -561,6 +604,18 @@
     </div>
   </section>
 
+  <section class="vision" id="vision">
+    <div class="vision-card">
+      <h2>Vision Board</h2>
+      <p>Share where you see yourself, your team, or Talent Synergy heading next. Your thoughts help shape the road to 5000.</p>
+
+      <a class="quiz-btn" id="visionLink" href="https://forms.google.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        Share Your Thoughts
+      </a>
+    </div>
+  </section>
+
   <section class="tabs" id="tabs">
     <div class="tabs-eyebrow">Event Details</div>
     <div class="tab-nav-wrap">
@@ -670,6 +725,10 @@
   document.getElementById('quizLink2').href = QUIZ_LINK_2;
   document.getElementById('quizLink3').href = QUIZ_LINK_3;
   document.getElementById('quizLinkMemory').href = MEMORY_CHECK_LINK;
+
+  // ---- Update this whenever you switch to a new Vision Board form ----
+  const VISION_BOARD_LINK = "https://forms.google.com/";
+  document.getElementById('visionLink').href = VISION_BOARD_LINK;
 
   // ---- Toggle the Itinerary tab on/off. Set to true when you're ready to publish it. ----
   const SHOW_ITINERARY = false;
